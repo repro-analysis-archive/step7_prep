@@ -1,0 +1,23 @@
+{
+ "label": "PLACEHOLDER",
+ "cells": [
+  3,
+  9,
+  15,
+  21,
+  39,
+  57,
+  73,
+  75,
+  93,
+  111,
+  115,
+  117,
+  123,
+  129,
+  147,
+  219
+ ],
+ "max_reps": 2,
+ "note": "tiny PLACEHOLDER grid for testing the report and figure scripts; not results"
+}

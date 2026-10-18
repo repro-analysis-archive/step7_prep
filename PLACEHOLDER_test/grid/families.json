@@ -1,0 +1,598 @@
+{
+ "W0:P1a": {
+  "D_bar": 1.7837016735900038,
+  "D_cells": {
+   "73": 1.7837016735900038
+  },
+  "ci_hi": 2.0217581525465644,
+  "ci_lo": 1.5584967006067538,
+  "conditions_failed": [],
+  "conditions_required": [],
+  "dropped_nonfinite": {
+   "73": 0
+  },
+  "enters_verdicts": false,
+  "family": "P1a",
+  "kind": "P1",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W0",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "ORACLE",
+  "without_arm": "ORACLE-C"
+ },
+ "W0:P1b-FM": {
+  "D_bar": 1.2750787120384308,
+  "D_cells": {
+   "21": 0.7338215978508928,
+   "39": 2.5367359426227547,
+   "73": 0.7098425699349413,
+   "75": 0.47984696372037855,
+   "93": 1.793053988037073,
+   "129": 0.2725480231599455,
+   "147": 2.399701898943031
+  },
+  "ci_hi": 1.51419042421038,
+  "ci_lo": 1.0030637949627554,
+  "conditions_failed": [],
+  "conditions_required": [
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "21": 0,
+   "39": 0,
+   "73": 0,
+   "75": 0,
+   "93": 0,
+   "129": 0,
+   "147": 0
+  },
+  "enters_verdicts": false,
+  "family": "P1b-FM",
+  "kind": "P1",
+  "n_cells": 7,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W0",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "W0:P1b-SITE": {
+  "D_bar": 3.719831554814767,
+  "D_cells": {
+   "21": 1.1833973124504718,
+   "39": 9.405914156552926,
+   "73": 1.0296639595912465,
+   "75": 0.7007845115664689,
+   "93": 8.554621779426505,
+   "129": 0.6190683091117758,
+   "147": 4.545370855003978
+  },
+  "ci_hi": 3.9347955437295066,
+  "ci_lo": 3.4991533217557347,
+  "conditions_failed": [],
+  "conditions_required": [],
+  "dropped_nonfinite": {
+   "21": 0,
+   "39": 0,
+   "73": 0,
+   "75": 0,
+   "93": 0,
+   "129": 0,
+   "147": 0
+  },
+  "enters_verdicts": false,
+  "family": "P1b-SITE",
+  "kind": "P1",
+  "n_cells": 7,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W0",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ },
+ "W0:P2-FM": {
+  "D_bar": -0.002186596674587057,
+  "D_cells": {
+   "3": -0.002186596674587057
+  },
+  "ci_hi": 0.0164343432398061,
+  "ci_lo": -0.01956227451454847,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE",
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "3": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-FM",
+  "instrument_like": true,
+  "kind": "P2",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "CONTRADICTED",
+  "set": "W0",
+  "share_positive": 0.0,
+  "verdict": "CONTRADICTED",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "W0:P2-ORACLE": {
+  "D_bar": 0.1127097930651176,
+  "D_cells": {
+   "3": 0.1127097930651176
+  },
+  "ci_hi": 0.1593370000526328,
+  "ci_lo": 0.06920074728563848,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "3": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-ORACLE",
+  "instrument_like": true,
+  "kind": "P2",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W0",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "ORACLE",
+  "without_arm": "ORACLE-C"
+ },
+ "W0:P2-SITE": {
+  "D_bar": 0.1626517399342718,
+  "D_cells": {
+   "3": 0.1626517399342718
+  },
+  "ci_hi": 0.23416986977440815,
+  "ci_lo": 0.09591633401320937,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "3": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-SITE",
+  "instrument_like": true,
+  "kind": "P2",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W0",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ },
+ "W5:P2-FM": {
+  "D_bar": 0.09905886594971995,
+  "D_cells": {
+   "9": 0.09905886594971995
+  },
+  "ci_hi": 0.20673234783454833,
+  "ci_lo": 0.013432064400024703,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE",
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "9": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-FM",
+  "instrument_like": true,
+  "kind": "P2",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W5",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "W5:P2-ORACLE": {
+  "D_bar": 0.07180654399946232,
+  "D_cells": {
+   "9": 0.07180654399946232
+  },
+  "ci_hi": 0.10459440780095271,
+  "ci_lo": 0.03755170948825414,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "9": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-ORACLE",
+  "instrument_like": true,
+  "kind": "P2",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "W5",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "ORACLE",
+  "without_arm": "ORACLE-C"
+ },
+ "W5:P2-SITE": {
+  "D_bar": 0.06337691151490414,
+  "D_cells": {
+   "9": 0.06337691151490414
+  },
+  "ci_hi": 0.16569186117275844,
+  "ci_lo": -0.03455637825592857,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "9": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-SITE",
+  "instrument_like": true,
+  "kind": "P2",
+  "n_cells": 1,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "INCONCLUSIVE",
+  "set": "W5",
+  "share_positive": 1.0,
+  "verdict": "INCONCLUSIVE",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ },
+ "primary:P1a": {
+  "D_bar": 0.6650498236725293,
+  "D_cells": {
+   "73": 1.0582783997729397,
+   "115": 0.271821247572119
+  },
+  "ci_hi": 0.8928122663862121,
+  "ci_lo": 0.40926507809537116,
+  "conditions_failed": [],
+  "conditions_required": [],
+  "dropped_nonfinite": {
+   "73": 0,
+   "115": 0
+  },
+  "enters_verdicts": true,
+  "family": "P1a",
+  "kind": "P1",
+  "n_cells": 2,
+  "rule_verdict": "SUPPORTED",
+  "set": "primary",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "ORACLE",
+  "without_arm": "ORACLE-C"
+ },
+ "primary:P1b-FM": {
+  "D_bar": 0.9775400340076598,
+  "D_cells": {
+   "21": 0.18565767808574746,
+   "39": 2.1971894062499215,
+   "73": 0.39674701839749155,
+   "75": 0.2217330864022267,
+   "93": 1.7921219432450775,
+   "129": 0.1361836676306308,
+   "147": 1.9131474380425229
+  },
+  "ci_hi": 1.1765576445119923,
+  "ci_lo": 0.7650357417728034,
+  "conditions_failed": [],
+  "conditions_required": [
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "21": 0,
+   "39": 0,
+   "73": 0,
+   "75": 0,
+   "93": 0,
+   "129": 0,
+   "147": 0
+  },
+  "enters_verdicts": true,
+  "family": "P1b-FM",
+  "kind": "P1",
+  "n_cells": 7,
+  "rule_verdict": "SUPPORTED",
+  "set": "primary",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "primary:P1b-SITE": {
+  "D_bar": 2.9986096148877577,
+  "D_cells": {
+   "21": 1.088620639382637,
+   "39": 6.281479427788328,
+   "73": 1.503488769156933,
+   "75": 1.0215946982656807,
+   "93": 4.996951978962552,
+   "129": 0.22807096253945133,
+   "147": 5.870060828118722
+  },
+  "ci_hi": 3.6035460587065624,
+  "ci_lo": 2.361695713568089,
+  "conditions_failed": [],
+  "conditions_required": [],
+  "dropped_nonfinite": {
+   "21": 0,
+   "39": 0,
+   "73": 0,
+   "75": 0,
+   "93": 0,
+   "129": 0,
+   "147": 0
+  },
+  "enters_verdicts": true,
+  "family": "P1b-SITE",
+  "kind": "P1",
+  "n_cells": 7,
+  "rule_verdict": "SUPPORTED",
+  "set": "primary",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ },
+ "primary:P2-FM": {
+  "D_bar": -0.058719115117831434,
+  "D_cells": {
+   "3": 0.0069338737299481125,
+   "9": -0.12210770300999278,
+   "15": -0.06098351607344962
+  },
+  "ci_hi": 0.060389426080073215,
+  "ci_lo": -0.20892720638324527,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE",
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "3": 0,
+   "9": 0,
+   "15": 0
+  },
+  "enters_verdicts": true,
+  "family": "P2-FM",
+  "kind": "P2",
+  "n_cells": 3,
+  "rule_verdict": "INCONCLUSIVE",
+  "set": "primary",
+  "share_positive": 0.3333333333333333,
+  "verdict": "INCONCLUSIVE",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "primary:P2-ORACLE": {
+  "D_bar": 0.05835080092516414,
+  "D_cells": {
+   "3": 0.11491667640880895,
+   "9": 0.0590356789941746,
+   "15": 0.0011000473725088667
+  },
+  "ci_hi": 0.09681324889736398,
+  "ci_lo": 0.013098370176325346,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "3": 0,
+   "9": 0,
+   "15": 0
+  },
+  "enters_verdicts": true,
+  "family": "P2-ORACLE",
+  "kind": "P2",
+  "n_cells": 3,
+  "rule_verdict": "SUPPORTED",
+  "set": "primary",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "ORACLE",
+  "without_arm": "ORACLE-C"
+ },
+ "primary:P2-SITE": {
+  "D_bar": 0.10707197232824779,
+  "D_cells": {
+   "3": 0.09095991328129596,
+   "9": 0.25123227437897583,
+   "15": -0.020976270675528458
+  },
+  "ci_hi": 0.10891133097295451,
+  "ci_lo": 0.052653721273390464,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "3": 0,
+   "9": 0,
+   "15": 0
+  },
+  "enters_verdicts": true,
+  "family": "P2-SITE",
+  "kind": "P2",
+  "n_cells": 3,
+  "rule_verdict": "INCONCLUSIVE",
+  "set": "primary",
+  "share_positive": 0.6666666666666666,
+  "verdict": "INCONCLUSIVE",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ },
+ "single_file:P1b-FM": {
+  "D_bar": 1.303681982365357,
+  "D_cells": {
+   "21": 0.4392304691446903,
+   "39": 5.334396572196484,
+   "73": 0.7260398637972715,
+   "75": -0.5868010830736035,
+   "93": 1.7389168411142548,
+   "129": -0.1760501895468743,
+   "147": 1.6500414029252768
+  },
+  "ci_hi": 2.13497068855823,
+  "ci_lo": 0.5370310921230251,
+  "conditions_failed": [],
+  "conditions_required": [
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "21": 0,
+   "39": 0,
+   "73": 0,
+   "75": 0,
+   "93": 0,
+   "129": 0,
+   "147": 0
+  },
+  "enters_verdicts": false,
+  "family": "P1b-FM",
+  "kind": "P1",
+  "n_cells": 7,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "INCONCLUSIVE",
+  "set": "single_file",
+  "share_positive": 0.7142857142857143,
+  "verdict": "INCONCLUSIVE",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "single_file:P1b-SITE": {
+  "D_bar": 3.6889053637144085,
+  "D_cells": {
+   "21": 0.4858301214734056,
+   "39": 10.540453744641722,
+   "73": 1.4693866901272576,
+   "75": 0.9659341986357566,
+   "93": 8.259832036694634,
+   "129": 0.5947187872089543,
+   "147": 3.506181967219127
+  },
+  "ci_hi": 4.191917406055191,
+  "ci_lo": 3.207443821259936,
+  "conditions_failed": [],
+  "conditions_required": [],
+  "dropped_nonfinite": {
+   "21": 0,
+   "39": 0,
+   "73": 0,
+   "75": 0,
+   "93": 0,
+   "129": 0,
+   "147": 0
+  },
+  "enters_verdicts": false,
+  "family": "P1b-SITE",
+  "kind": "P1",
+  "n_cells": 7,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "single_file",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ },
+ "single_file:P2-FM": {
+  "D_bar": 0.012690472038660047,
+  "D_cells": {
+   "3": 0.00518302644123521,
+   "9": 0.16308129528357734,
+   "15": -0.13019290560883243
+  },
+  "ci_hi": 0.08189147758836343,
+  "ci_lo": -0.051750373518045935,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE",
+   "E1",
+   "E3-site",
+   "E3-state"
+  ],
+  "dropped_nonfinite": {
+   "3": 0,
+   "9": 0,
+   "15": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-FM",
+  "kind": "P2",
+  "n_cells": 3,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "INCONCLUSIVE",
+  "set": "single_file",
+  "share_positive": 0.6666666666666666,
+  "verdict": "INCONCLUSIVE",
+  "with_arm": "FM-P",
+  "without_arm": "FM-P-C"
+ },
+ "single_file:P2-SITE": {
+  "D_bar": 0.1230273724681335,
+  "D_cells": {
+   "3": 0.20565980860174465,
+   "9": 0.1307551145444431,
+   "15": 0.03266719425821272
+  },
+  "ci_hi": 0.13427763182069793,
+  "ci_lo": 0.10834126721809208,
+  "conditions_failed": [],
+  "conditions_required": [
+   "G-SITE"
+  ],
+  "dropped_nonfinite": {
+   "3": 0,
+   "9": 0,
+   "15": 0
+  },
+  "enters_verdicts": false,
+  "family": "P2-SITE",
+  "kind": "P2",
+  "n_cells": 3,
+  "note": "\u00a710.3 sensitivity run: reported separately; does not enter family verdicts",
+  "rule_verdict": "SUPPORTED",
+  "set": "single_file",
+  "share_positive": 1.0,
+  "verdict": "SUPPORTED",
+  "with_arm": "SITE",
+  "without_arm": "NV"
+ }
+}

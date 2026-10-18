@@ -1,0 +1,19 @@
+{
+ "eta2_primary_4dp": 0.0,
+ "gate_pass_primary": true,
+ "label": "PLACEHOLDER",
+ "sets": {
+  "W0": {
+   "eta2_S_window_start": 0.0,
+   "gate_pass": true
+  },
+  "W5": {
+   "eta2_S_window_start": 0.0,
+   "gate_pass": true
+  },
+  "primary": {
+   "eta2_S_window_start": 0.0,
+   "gate_pass": true
+  }
+ }
+}

@@ -1,0 +1,8 @@
+R1 step 6 not complete (empty out6): exit 3 | refused: step 6 is not complete (state: absent)
+R2 --expect-commit = step-6 commit, not HEAD: exit 3 | refused: HEAD aaa4ebd213eb is not --expect-commit db15bd0ced0b
+R3 untracked file: exit 3 | refused: working tree not clean
+R4 tampered shard: exit 3 | refused: the shards differ from the step-6 record (digest mismatch)
+R5 analysis file changed since step 6: exit 3 | refused: analysis or step-6 runner files changed since step 6: ['ss_benchmark/constants.py']
+R6 full step 7 (PLACEHOLDER): exit 0 in 11 s
+R7 relaunch after completion: exit 3 | refused: step 7 is already complete for this step-6 output
+R8 make_report/make_figures on the copy's committed 1-cell step-7 records: report and figures written
