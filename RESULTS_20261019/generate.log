@@ -1,0 +1,10 @@
+# 2026-10-19 08:46:13 +0900 make_report.py
+report written: RESULTS_20261019/REPORT.md (896 lines)
+exit=0
+# 2026-10-19 08:46:19 +0900 make_figures.py
+figures and tables written to RESULTS_20261019/figures: fig1_bias_coverage_vs_K.pdf, fig2_role_switch.pdf, fig3_contrast_KP.pdf, fig4_checks.pdf, figS1_contrast_all_cells.pdf, figS2_rel_bias_all_cells.pdf, figS3_coverage_all_cells.pdf, table1_data_sets.csv, table1_data_sets.md, table2_models.csv, table2_models.md, table3_family_verdicts.csv, table3_family_verdicts.md
+	Command being timed: "/home/user/miniconda3/bin/python3 make_figures.py --step7 /home/user/projects/medical_video_causal_gate/results/step7 --step5 /home/user/projects/medical_video_causal_gate/results/step5 --out RESULTS_20261019/figures"
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:16.52
+	Maximum resident set size (kbytes): 256264
+exit=0
+2026-10-19 08:46:45 +0900 pandoc 2.9.2.1: REPORT.md -> REPORT.html (format conversion only; content unchanged; make_report.py writes Markdown only) exit=0

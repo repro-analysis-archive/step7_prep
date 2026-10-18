@@ -1,0 +1,10 @@
+**Table 3. Family verdicts (primary set, §12.3)**
+
+| family | comparison | cells | D_bar | CI95 | share_positive | verdict | conditions_failed |
+|---|---|---|---|---|---|---|---|
+| P1a | ORACLE vs ORACLE-C | 66 | +1.925 | [+1.909, +1.934] | 0.98 | SUPPORTED | none |
+| P1b-SITE | SITE vs NV | 48 | +2.198 | [+2.167, +2.226] | 1.00 | SUPPORTED | none |
+| P1b-FM | FM-P vs FM-P-C | 48 | +0.594 | [+0.582, +0.606] | 1.00 | NOT TESTED (reported as P3 / descriptive) | E3-site |
+| P2-SITE | SITE vs NV | 18 | +0.052 | [+0.048, +0.056] | 1.00 | SUPPORTED | none |
+| P2-FM | FM-P vs FM-P-C | 12 | +0.005 | [-0.000, +0.012] | 0.50 | NOT TESTED (reported as P3 / descriptive) | E3-site |
+| P2-ORACLE | ORACLE vs ORACLE-C | 12 | +0.042 | [+0.036, +0.048] | 0.92 | SUPPORTED | none |
