@@ -1,8 +1,10 @@
-# Methods (draft, results-independent)
+# Methods (draft)
 
-*Drafted 2026-10-09 from the frozen protocol (`docs/SS_PROTOCOL_DS203.md`, commit `4c86dc5`) and the repository records named in each section. Nothing here depends on step-5, step-6 or step-7 outcomes.*
+*Drafted 2026-10-09 from the frozen protocol (`docs/SS_PROTOCOL_DS203.md`, commit `4c86dc5`) and the repository records named in each section. That draft did not depend on step-5, step-6 or step-7 outcomes.*
 
-*`[REF: …]` marks a literature reference for the investigator to supply. `[TO FILL: …]` marks a value or commit that will exist only after the running computations finish.*
+*Updated 2026-10-20, after all results were known, from the facts of the evaluator record `SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md` (SHA-256 `c1d8d651…dc27684`) only: r and all commit hashes filled; the executed order; the bootstrap's resampling of the truths; operational times; a new section "Exploratory analyses (outside the frozen protocol)"; the deviation register. No number was changed. Post-result presentation choices are recorded in `POST_RESULT_PRESENTATION.md`.*
+
+*`[REF: …]` marks a literature reference for the investigator to supply. `[TO FILL: …]` marks an item the investigator must still supply.*
 
 ## Study design and protocol freeze
 
@@ -14,7 +16,8 @@
   * unmeasured-confounding strength.
 * **Scope.** The benchmark is a deliberately constructed orthogonal design. It does not estimate any causal effect in the source dataset.
 * **Freeze.** The analysis protocol was frozen before any video frame was decoded for analysis, any representation was extracted, or any synthetic action, outcome or estimate was generated.
-  * Freeze commit: `4c86dc5f7df357a09311198f34e141972fe0175a`, 2026-10-05 12:22:23 +0900. The protocol file alone; SHA-256 `cd7e1402…d748926`. Recorded in `decisions/SS_PROTOCOL_FREEZE_RECORD.md`.
+  * Freeze commit: `4c86dc5f7df357a09311198f34e141972fe0175a`, 2026-10-05 12:22:23 +0900. The protocol file alone; SHA-256 `cd7e1402…d748926`. Recorded in `decisions/SS_PROTOCOL_FREEZE_RECORD.md` (freeze record commit `8f63e43`).
+* **Review.** Until 2026-10-07, stages were reviewed in written audit documents from a review process separate from the implementation sessions [TO FILL: review nature]. From 2026-10-07 the investigator is the sole approver.
   * Directional predictions are prespecified, theory-motivated hypotheses [REF: theory maps for site adjustment in sequential causal analysis]. They are reported as "consistent / inconsistent with the theory-motivated direction".
 * **Execution order.** The protocol fixes the order (§14):
   1. freeze;
@@ -26,6 +29,13 @@
   7. aggregation and report.
 
   Section 15 forbids changes after the freeze, except by a committed amendment, and forbids re-running extraction or the grid with different settings after seeing results.
+* **Executed order** (repository records; confirmed in `step7_prep/CONFIRM_ITEMS_20261019.md`, commit `fa2b8c7`):
+  1. protocol freeze `4c86dc5` (2026-10-05 12:22 +0900), freeze record `8f63e43`;
+  2. SDR implementation `af56777`, final code lock `98cba1e`; adapter correction `ad8833a` and model reselection `ba73820` after the lock;
+  3. step 4–5 runner `9e1aa71`; step-4 record `8d4c61a`;
+  4. step-5 record `0ebf2cf` → §13 record `0667430` → step-6 runner `7adaf13`, ordered by ancestry (all three committed at 14:26:41 on 2026-10-12);
+  5. step 6 started at 14:26:42 with no shards present. The first completed unit is dated 14:27:03.80 (file modification time), 22.8 s after `0ebf2cf`. There was one attempt only. Step 6 completed on 2026-10-18 at 20:20:34 (last unit 20:17:38; 73,200 units, 18 workers);
+  6. step-7 record `2880d73`, committed automatically by the step-7 runner, which does not display results before committing.
 
 ## Data
 
@@ -78,7 +88,11 @@
   * centre crop to a square of the shorter side;
   * bilinear antialiased resize to the model input;
   * a common mask: a circle of radius r × side plus the lowest 3 % of the square, set to black before model normalisation.
-  * r = 0.45 unless a mechanical check of the per-centre mean-frame radial profile (§3.1, §14 step 4a) gives a smaller visible radius; the only alternative permitted is r = 0.98 × min_c ρ_c. Value used: [TO FILL: r from `results/step4/mask_check.json`].
+  * r = 0.45 unless a mechanical check of the per-centre mean-frame radial profile (§3.1, §14 step 4a) gives a smaller visible radius; the only alternative permitted is r = 0.98 × min_c ρ_c.
+  * Value used: **r = 0.45** (step-4 record `8d4c61a`, `results/step4/mask_check.json`).
+    * ρ_c = 0.5625 for centre 2 and 0.703125 for centres 3, 4 and 5 (the last profile point).
+    * min_c ρ_c = 0.5625 ≥ 0.45, so the fallback was not used.
+    * The per-centre profiles are in Supplementary Figure S4 and Table S4.
   * Near-uniform frames (BT.601 luma SD < 4.0 over the unmasked disc at 256 × 256) were kept and flagged.
 * **Native acquisition (sensitivity).** The same grid frames, resized only. These frames retain acquisition cues: resolution, borders, overlays (including on-screen elapsed time at centre 5), compression and motion blur.
 
@@ -116,7 +130,7 @@
 * **Extraction runs.** Run on an RTX 4500 Ada GPU in bf16 with deterministic GPU settings:
   * `cudnn.deterministic`, no cuDNN benchmarking, deterministic algorithms where supported;
   * on fixed synthetic inputs these gave bit-identical outputs for all three models, at a 3–6.4 % throughput cost.
-* **Committed outputs.** Every representation file's SHA-256 is in the step-4 record [TO FILL: step-4 record commit]. Weight-file SHA-256 values are in `MODEL_SELECTION_RECORD.md` and `STEP4_5_RUNNER.md`.
+* **Committed outputs.** Every representation file's SHA-256 is in the step-4 record (`8d4c61a`). Weight-file SHA-256 values are in `MODEL_SELECTION_RECORD.md` and `STEP4_5_RUNNER.md`.
 
 ## PCA and linear site removal
 
@@ -229,10 +243,11 @@ At each window step, nuisances condition on the history of past synthetic action
 * **Aggregation (§12.3).**
   * The oriented relative difference per cell (positive = as predicted) is averaged over the family's cells.
   * A percentile bootstrap resamples replicates within cells (B = 2,000; seed 20261008); cells are fixed design points.
+  * The same resampling indices are used for both arms of a pair and for the truths, so each cell's mean truth is recomputed on each resample. Section 12.3 does not state this. It is how the locked aggregation code (`ss_benchmark/grid.py`: `_d_values`, `family_verdict`) implements the bootstrap, confirmed against the repository (`CONFIRM_ITEMS_20261019.md`).
   * **SUPPORTED** if the lower bound is > 0 and D_j > 0 in ≥ 75 % of cells. **CONTRADICTED** if the upper bound is < 0 or D_j > 0 in ≤ 25 %. **INCONCLUSIVE** otherwise.
   * P1b-FM and P2-FM require E1 and E3-site to pass on both sets and E3-state retention to pass or be not applicable. The P2 families require G-SITE. A family whose conditions fail is reported as P3.
 * **Claim ceilings (§13)** were applied mechanically:
-  * from the committed step-5 record, before the causal grid (`scripts/apply_section13.py`; [TO FILL: §13 record commit]);
+  * from the committed step-5 record, before the causal grid (`scripts/apply_section13.py`; §13 record `0667430`);
   * the two rules that need family verdicts, at step 7.
 
 ## Execution, deviations and operations
@@ -243,9 +258,14 @@ At each window step, nuisances condition on the history of past synthetic action
   * logs resource use, but no estimate.
 * **Step 4–5 runner** (`9e1aa71`): staging, the mask check, extraction in two lanes, near-uniform flags, and an automatic records-only commit of the step-4 record before step 5 could start. Settings: 12 workers on 12 of 14 physical cores, 6 threads per process, a memory cap of 80 % of RAM, at most 2 concurrent disk readers.
 * **Operational events** (`decisions/OPERATIONS_LOG_STEP4_5.md`):
-  * **Memory-guard stop.** On 2026-10-06 at 16:35 +0900 the step 4–5 runner's memory guard stopped the run with about 80 GiB of RAM available. With that much memory available, only the guard's swap-out criterion (more than 64 MiB swapped out in 60 s) can have fired, so the stop was a false positive. `vm.swappiness` was lowered from 60 to 10.
-  * **Resume.** The run was resumed with the same launch commit at 17:28. The interrupted mask check, a single unit, restarted from the beginning; completed units were not recomputed.
-  * **Watchdog.** A watchdog (`~/ops/runner_watchdog_v1.sh`, pid 4004380, log `~/ops/runner_watchdog.log`) was started on 2026-10-07 at 09:37:15 +0900 to relaunch the runner after a memory-pressure stop. No relaunch had been logged as of the morning of 2026-10-09 (investigator; `step7_prep/OPERATIONS_LOG_ADDENDUM.md`). A check at about 08:15 on 2026-10-07, before it was started, had found no watchdog.
+  * **Memory-guard stop.** On 2026-10-06 at 16:35:27 +0900 the step 4–5 runner's memory guard stopped the run with about 80 GiB of RAM available.
+    * With that much memory available, only the guard's swap-out criterion (more than 64 MiB swapped out in 60 s) can have fired, so the stop was a false positive.
+    * The kernel log shows no OOM line between 16:00 and 17:30.
+  * **Swap settings.** `vm.swappiness` was set from 60 to 10, and swap was disabled and re-enabled, at 17:28:14–17:28:17 (system journal, sudo entries). The operations log records the swappiness change without a time and does not record the swap off/on.
+  * **Resume.** The run was resumed with the same launch commit at 17:28:48. The interrupted mask check, a single unit, restarted from the first case; completed units were not recomputed.
+  * **Watchdog.** A watchdog (`~/ops/runner_watchdog_v1.sh`, pid 4004380, log `~/ops/runner_watchdog.log`) was started on 2026-10-07 at 09:37:15 +0900 to relaunch the runner after a memory-pressure stop.
+    * It never relaunched the runner.
+    * A check at about 08:15 on 2026-10-07, before it was started, had found no watchdog (`step7_prep/OPERATIONS_LOG_ADDENDUM.md`).
 * **dts warnings.** ffmpeg emitted "non monotonically increasing dts" warnings. A separate quality check on 21 staged files found:
   * **No frame loss.** Four full decodes delivered exactly the expected frame counts.
   * **Cause:** duplicated source presentation timestamps (21 events in 21 files); the source decoding timestamps were monotonic.
@@ -256,17 +276,70 @@ At each window step, nuisances condition on the history of past synthetic action
   2. the §13 record, from the mechanical application;
   3. the step-6 runner and decision records.
 
-  It then launched step 6 [TO FILL: chain commits]. The basis is that, under the frozen protocol, step 6's computation does not depend on step-5 outcomes, and §13 is mechanical (`decisions/STEP6_RUNNER.md` §1).
+  The chain commits are `0ebf2cf` (step-5 record), `0667430` (§13 record) and `7adaf13` (step-6 runner), all at 14:26:41 on 2026-10-12, in this order by ancestry. The chain then launched step 6, which started at 14:26:42 with no shards present. The basis is that, under the frozen protocol, step 6's computation does not depend on step-5 outcomes, and §13 is mechanical (`decisions/STEP6_RUNNER.md` §1).
 * **Step-6 runner.**
   * Before starting it confirms that `ss_benchmark/` is byte-identical to the SDR commit; the only exception is the extraction adapter of CODELOCK_CORRECTION_001, which the grid does not import.
   * It runs the locked grid driver without its final aggregation; the aggregation is step 7.
   * Its memory guard uses available memory and pressure-stall information rather than swap-out.
 * **Sensitivity-set ceilings in the report layer.** The locked aggregation judges the single-file and per-W sensitivity families with the primary-set E1 / E3 conditions. Without changing locked code, the report keeps that verdict (labelled "locked aggregation") and states next to it the §13 claim ceiling obtained from each set's own step-5 E1–E3 ("protocol-consistent ceiling"). Step 5 computes no set-specific E1–E3 for the per-W sets, so their FM comparisons are reported descriptively only. Families that the locked code computes outside the §10.3 scope (e.g. W0:P1a) appear only in an exploratory section, never as verdicts.
-* **Presentation.** Main-text figures show the slice W = 30, α = 0.5, γ = 1 (primary set); supplementary heatmaps show every grid cell. This was fixed on 2026-10-09 before any step-6 result existed (`step7_prep/PRESENTATION_DECISIONS.md`).
-* **Exploratory analyses X1 / X2.** The plan for the exploratory analyses X1 and X2, which lie outside the frozen protocol, was committed (`b6d1cf7`) and registered on OSF (https://osf.io/5c627, embargoed until 2028-10-13) before any step-6 result was accessed.
-* **Deviations from the frozen protocol:** [TO FILL after step 7; none known at drafting]. Post-lock changes:
-  * CODELOCK_CORRECTION_001, an adapter defect correction under the frozen source-priority rule;
-  * the orchestration runners, the thread and worker settings, and the operational events above, which do not change analysis code or settings fixed by the protocol.
+* **Presentation.**
+  * Main-text figures show the slice W = 30, α = 0.5, γ = 1 (primary set); supplementary heatmaps show every grid cell. This was fixed on 2026-10-09 before any step-6 result existed (`step7_prep/PRESENTATION_DECISIONS.md`).
+  * Added on 2026-10-20, after the results were known: Supplementary Figure S4 / Table S4 (mask check) and the exploratory Tables X, X-E3, B, B-sens and Figures X, B (`step7_prep/SUPPLEMENT_20261020/`). These presentation choices are recorded separately in `step7_prep/POST_RESULT_PRESENTATION.md`.
+* **Exploratory analyses.** X1 / X2 and B lie outside the frozen protocol; see the next section.
+* **Deviation and operations register** (evaluator record v5 §11; the source and weight retrievals are carried from v2 §11 and documented in the decision records named):
+  * **Source and weight retrievals.**
+    1. Initial third-party code retrieval delivered bundled evaluation-tool weights (I3D, LPIPS / VGG); they were never loaded and were deleted (`CODELOCK_INCIDENT_001`). Hard-limit incident, documented.
+    2. VideoMAE model source, authorised (`CODELOCK_AUTH_002`).
+    3. VideoMAE `datasets.py` and `transforms.py`, authorised (`CODELOCK_AUTH_003`).
+    4. SurgeNet official model source, authorised for CODELOCK_CORRECTION_001.
+    5. VISSL raw source for the SelfSupSurg equivalence check: beyond the SurgeNet-only retrieval wording; source only, no weights; recorded in the correction record. Minor documented deviation.
+    6. NVIDIA Cosmos-Tokenizer source at `3584ae75` for the reference equivalence check, authorised in the step 4–5 preparation.
+    7. Weights of the selected models and the Cosmos reference, downloaded at step 3 / step 4–5 preparation with SHA-256 recorded.
+  * **Post-lock changes:**
+    * CODELOCK_CORRECTION_001, an adapter defect correction under the frozen source-priority rule;
+    * the orchestration runners, the thread and worker settings, and the operational events above, which do not change analysis code or settings fixed by the protocol.
+  * **Reporting and documentation:**
+    * the per-centre mask-check profiles required by §3.1 were not in the first results report; they are now reported (Supplementary Figure S4, Table S4);
+    * the swap off/on at 17:28:14–17:28:17 on 2026-10-06 is not in the operations log, which also gives the swappiness change without a time;
+    * the bootstrap's resampling of the truths is not stated in §12.3 (see Aggregation);
+    * the Δ orientation and bootstrap seeds of the exploratory analyses X1 / X2 differ from §12.3 (next section).
+
+## Exploratory analyses (outside the frozen protocol)
+
+*Added 2026-10-20 from the evaluator record v5 §8–9. Neither analysis produces a verdict, alters a family verdict or §13, or replaces any protocol result.*
+
+### X1 / X2
+
+* **Plan and registration.** Plan `b6d1cf7` (2026-10-13 08:21 +0900); OSF https://osf.io/5c627, embargoed until 2028-10-13.
+* **Disclosure.** The plan was written after the step-5 E3-site failure on the 158-case set was known and while step 6 was running, before access to step-6 results.
+* **Analyses.**
+  * X1: the LEACE eraser refitted on the 158-case analysis region; the FM−C arms (FM-P−C, FM-S−C, REF−C) rerun on these features.
+  * X2: the original LEACE features with linear-only nuisance learners.
+  * Both are compared, cell by cell and paired on replicates, with the step-6 arms k−C, FM-k and NV on the 71 cells of the P1b-FM group, the P2-FM group and the main-figure slice.
+* **Run.** Launch `015595d`. Control C0 reproduced the step-6 records exactly, and the 28,400 truths are identical to step 6. Records `1c8e628` (2026-10-19 20:18).
+* **Δ.**
+  * Per cell, Δ = (|bias_X| − |bias_step-6|) / mean truth, which has the same form as D (§12.3) and uses the same per-cell mean truth as step 6 (1,278 / 1,278 rows).
+  * The paired bootstrap follows the §12.3 scheme (B = 2,000; cells fixed).
+  * Differences from §12.3:
+    * Δ is always (X arm − step-6 arm), not oriented by family; negative Δ means the X arm has the smaller |bias|;
+    * the bootstrap seed names differ from step 6;
+    * per-cell intervals are added.
+* **Ceiling** (v5 §8): exploratory; no verdict; cannot restore P1b-FM / P2-FM; nonlinear site information remains after X1; X2 changes do not show that erasure caused a difference.
+* **Reported in** Tables X and X-E3 and Supplementary Figure X (`SUPPLEMENT_20261020/`).
+
+### B
+
+* **Plan and registration.** Plan `e1c27b4` (2026-10-19 10:00 +0900); OSF https://osf.io/g9ymw, embargoed until 2028-10-13.
+* **Disclosure.** The plan was written after the step-7 verdicts were generated in the same working session. B uses no step-6 / step-7 or X quantity.
+* **Design** (plan `e1c27b4`).
+  * Evaluation sets: S1, the 278 cases with all steps; S2, the 158 primary cases with all steps; S3, the 158 cases in the analysis region.
+  * (a) Transport: the S1-fitted E3 probe evaluated on each set. (b) Within-set refit. The two analyses are reported separately and never pooled.
+  * Linear and MLP probes; case-level balanced accuracy with case-bootstrap intervals.
+  * Judgement: whether the one-sided 95 % upper bound exceeds 0.35.
+  * Sensitivity: equal-size subsampling (28 cases per centre, 75 steps per case, 20 draws); descriptive point estimates, no bootstrap, no judgement.
+* **Run.** Launch `c7354ed`. Control C-B0 reproduced the step-5 E3 numbers for all keys. Records `458341f` (2026-10-20 00:29).
+* **Ceiling** (v5 §9): B locates where the judgement changes; it does not identify why. The subsampling changes centre balance, case set and steps per case at the same time. *Hypothesis (not tested):* linear guardedness is exact only on the fitting population, so within-set refits on some subsets (S3 and the equal-size subsamples, but not S2, whose within-set linear BA is 0.231 / 0.239 / 0.208 for P / S / REF, upper bounds 0.251–0.282) recover some linear site information; whether window selection adds to this is not determined by B.
+* **Reported in** Tables B and B-sens and Supplementary Figure B (`SUPPLEMENT_20261020/`).
 
 ## Software and hardware
 
@@ -278,12 +351,15 @@ At each window step, nuisances condition on the history of past synthetic action
 
 | step | commit / record |
 |---|---|
-| protocol freeze (§14 step 1) | `4c86dc5` |
+| protocol freeze (§14 step 1) | `4c86dc5`; freeze record `8f63e43` |
 | SDR implementation / code lock (§14 step 2) | `af56777` / `98cba1e` (`CODELOCK_FINAL_RECORD.md`) |
 | model selection (§14 step 3) | `cb78391`, superseded after CODELOCK_CORRECTION_001 (`ad8833a`) by `ba73820` |
 | step 4–5 runner | `9e1aa71` (`STEP4_5_RUNNER.md`) |
-| step-4 record (automatic) | [TO FILL] |
-| step-5 record, §13 record, step-6 runner (chain) | [TO FILL] |
-| step-7 record | [TO FILL] |
+| step-4 record (automatic) | `8d4c61a` |
+| step-5 record, §13 record, step-6 runner (chain) | `0ebf2cf`, `0667430`, `7adaf13` |
+| step-7 record | `2880d73` |
+| repository confirmation of the evaluator-record items | `fa2b8c7` (step7_prep, `CONFIRM_ITEMS_20261019.md`) |
+| exploratory X1 / X2: plan / launch / records | `b6d1cf7` / `015595d` / `1c8e628` (`/srv/ss_exploratory`) |
+| exploratory B: plan / launch / records | `e1c27b4` / `c7354ed` / `458341f` (`/srv/ss_exploratory_B`) |
 
 **Data and code availability.** [TO FILL: dataset access statement for Appendix300 / OPARA licence; repository availability.]

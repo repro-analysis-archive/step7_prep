@@ -1,0 +1,6 @@
+# 2026-10-20 08:52:33 +0900 make_supplement.py
+written: CAPTIONS.md, SOURCES.md, figB_ba_by_set.pdf, figS4_mask_profiles.pdf, figX_cell_delta.pdf, tableB_ba.csv, tableB_ba.md, tableB_judgements.csv, tableB_sens.csv, tableB_sens.md, tableS4_mask_check.csv, tableS4_mask_check.md, tableX_E3.csv, tableX_E3.md, tableX_group_summaries.csv, tableX_group_summaries.md
+	Command being timed: "/home/user/miniconda3/bin/python3 make_supplement.py --fact-base /home/user/Downloads/SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md --out SUPPLEMENT_20261020"
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.89
+	Maximum resident set size (kbytes): 186548
+exit=0

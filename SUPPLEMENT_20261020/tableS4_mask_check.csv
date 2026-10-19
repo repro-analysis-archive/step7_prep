@@ -1,0 +1,13 @@
+scope,item,value
+centre 2,n_frames,2820
+centre 3,n_frames,2797
+centre 4,n_frames,4850
+centre 5,n_frames,7093
+centre 2,rho_c (visible_radius),0.5625
+centre 3,rho_c (visible_radius),0.703125
+centre 4,rho_c (visible_radius),0.703125
+centre 5,rho_c (visible_radius),0.703125
+all centres,min_c rho_c (min_visible_radius),0.5625
+all centres,"r (final mask radius, x side)",0.45
+all centres,mask_check_valid (run_meta.json),true
+all centres,fallback r = 0.98 x min_c rho_c,not used (recorded r = 0.45; min_c rho_c >= 0.45)

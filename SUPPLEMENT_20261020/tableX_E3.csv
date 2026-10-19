@@ -1,0 +1,133 @@
+block,key,probe,condition,source,field,value
+E3-site (158-case analysis region),P,linear,step 5 (protocol LEACE),checks.json E3_site_primary,n_cases,158
+E3-site (158-case analysis region),P,linear,step 5 (protocol LEACE),checks.json E3_site_primary,ba,0.416124316859611
+E3-site (158-case analysis region),P,linear,step 5 (protocol LEACE),checks.json E3_site_primary,lo_2p5,0.35210350311453253
+E3-site (158-case analysis region),P,linear,step 5 (protocol LEACE),checks.json E3_site_primary,hi_97p5,0.4810367022683199
+E3-site (158-case analysis region),P,linear,step 5 (protocol LEACE),checks.json E3_site_primary,upper_one_sided_95,0.47242022683199153
+E3-site (158-case analysis region),P,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,n_cases,158
+E3-site (158-case analysis region),P,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,ba,0.25
+E3-site (158-case analysis region),P,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,lo_2p5,0.25
+E3-site (158-case analysis region),P,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,hi_97p5,0.25
+E3-site (158-case analysis region),P,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,upper_one_sided_95,0.25
+E3-site (158-case analysis region),P,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,n_cases,158
+E3-site (158-case analysis region),P,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,ba,0.7019634776987718
+E3-site (158-case analysis region),P,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,lo_2p5,0.6403769943292003
+E3-site (158-case analysis region),P,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,hi_97p5,0.7630457777516602
+E3-site (158-case analysis region),P,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,upper_one_sided_95,0.7547454383851443
+E3-site (158-case analysis region),P,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,n_cases,158
+E3-site (158-case analysis region),P,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,ba,0.5765961979197274
+E3-site (158-case analysis region),P,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,lo_2p5,0.5058921776752658
+E3-site (158-case analysis region),P,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,hi_97p5,0.6472814868954575
+E3-site (158-case analysis region),P,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,upper_one_sided_95,0.6367310997825704
+E2 primary (158-case analysis region),P,,"step 5, before removal",checks.json E2_primary,auc_base,0.7011597852736465
+E2 primary (158-case analysis region),P,,"step 5, before removal",checks.json E2_primary,auc_full,0.751328600059188
+E2 primary (158-case analysis region),P,,"step 5, before removal",checks.json E2_primary,delta_auc,0.05016881478554147
+E2 primary (158-case analysis region),P,,"step 5, before removal",checks.json E2_primary,ci_lo,0.01941996341851463
+E2 primary (158-case analysis region),P,,"step 5, before removal",checks.json E2_primary,ci_hi,0.08049018479525075
+E2 primary (158-case analysis region),P,,"step 5, before removal",checks.json E2_primary,pass,true
+E2 primary (158-case analysis region),P,,"step 5, after protocol removal",checks.json E2_primary_after_removal,auc_base,0.699490444007669
+E2 primary (158-case analysis region),P,,"step 5, after protocol removal",checks.json E2_primary_after_removal,auc_full,0.7430292298405775
+E2 primary (158-case analysis region),P,,"step 5, after protocol removal",checks.json E2_primary_after_removal,delta_auc,0.04353878583290849
+E2 primary (158-case analysis region),P,,"step 5, after protocol removal",checks.json E2_primary_after_removal,ci_lo,0.011700476748632544
+E2 primary (158-case analysis region),P,,"step 5, after protocol removal",checks.json E2_primary_after_removal,ci_hi,0.07394520971741536
+E2 primary (158-case analysis region),P,,"step 5, after protocol removal",checks.json E2_primary_after_removal,pass,false
+E2 primary (158-case analysis region),P,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,auc_base,0.699490444007669
+E2 primary (158-case analysis region),P,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,auc_full,0.7506158526198501
+E2 primary (158-case analysis region),P,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,delta_auc,0.05112540861218107
+E2 primary (158-case analysis region),P,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,ci_lo,0.018883112460850737
+E2 primary (158-case analysis region),P,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,ci_hi,0.08287099206579954
+E2 primary (158-case analysis region),P,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,pass,true
+E3-state retention (158-case),P,,step 5,checks.json E3_state_primary,applicable,true
+E3-state retention (158-case),P,,step 5,checks.json E3_state_primary,pass_,true
+E3-state retention (158-case),P,,step 5,checks.json E3_state_primary,retained_fraction,0.8678456132365371
+E3-state retention (158-case),P,,X1,x1_e3.json E3_state_primary_X1,applicable,true
+E3-state retention (158-case),P,,X1,x1_e3.json E3_state_primary_X1,pass_,true
+E3-state retention (158-case),P,,X1,x1_e3.json E3_state_primary_X1,retained_fraction,1.0190674990176425
+E3-site (158-case analysis region),S,linear,step 5 (protocol LEACE),checks.json E3_site_primary,n_cases,158
+E3-site (158-case analysis region),S,linear,step 5 (protocol LEACE),checks.json E3_site_primary,ba,0.3932942057942058
+E3-site (158-case analysis region),S,linear,step 5 (protocol LEACE),checks.json E3_site_primary,lo_2p5,0.3460804820179821
+E3-site (158-case analysis region),S,linear,step 5 (protocol LEACE),checks.json E3_site_primary,hi_97p5,0.44438374125874114
+E3-site (158-case analysis region),S,linear,step 5 (protocol LEACE),checks.json E3_site_primary,upper_one_sided_95,0.4354458041958042
+E3-site (158-case analysis region),S,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,n_cases,158
+E3-site (158-case analysis region),S,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,ba,0.25
+E3-site (158-case analysis region),S,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,lo_2p5,0.25
+E3-site (158-case analysis region),S,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,hi_97p5,0.25
+E3-site (158-case analysis region),S,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,upper_one_sided_95,0.25
+E3-site (158-case analysis region),S,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,n_cases,158
+E3-site (158-case analysis region),S,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,ba,0.42754671798789445
+E3-site (158-case analysis region),S,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,lo_2p5,0.36814784480225654
+E3-site (158-case analysis region),S,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,hi_97p5,0.4891937107010636
+E3-site (158-case analysis region),S,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,upper_one_sided_95,0.476329552800141
+E3-site (158-case analysis region),S,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,n_cases,158
+E3-site (158-case analysis region),S,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,ba,0.30947361462067347
+E3-site (158-case analysis region),S,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,lo_2p5,0.25465104748192985
+E3-site (158-case analysis region),S,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,hi_97p5,0.36564657768701875
+E3-site (158-case analysis region),S,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,upper_one_sided_95,0.3566002012693189
+E2 primary (158-case analysis region),S,,"step 5, before removal",checks.json E2_primary,auc_base,0.7014793932259824
+E2 primary (158-case analysis region),S,,"step 5, before removal",checks.json E2_primary,auc_full,0.7036293209031242
+E2 primary (158-case analysis region),S,,"step 5, before removal",checks.json E2_primary,delta_auc,0.0021499276771418385
+E2 primary (158-case analysis region),S,,"step 5, before removal",checks.json E2_primary,ci_lo,-0.017233391304955586
+E2 primary (158-case analysis region),S,,"step 5, before removal",checks.json E2_primary,ci_hi,0.023679380945683542
+E2 primary (158-case analysis region),S,,"step 5, before removal",checks.json E2_primary,pass,false
+E2 primary (158-case analysis region),S,,"step 5, after protocol removal",checks.json E2_primary_after_removal,auc_base,0.7009213206929662
+E2 primary (158-case analysis region),S,,"step 5, after protocol removal",checks.json E2_primary_after_removal,auc_full,0.7042451363558015
+E2 primary (158-case analysis region),S,,"step 5, after protocol removal",checks.json E2_primary_after_removal,delta_auc,0.00332381566283535
+E2 primary (158-case analysis region),S,,"step 5, after protocol removal",checks.json E2_primary_after_removal,ci_lo,-0.018304288438947013
+E2 primary (158-case analysis region),S,,"step 5, after protocol removal",checks.json E2_primary_after_removal,ci_hi,0.02518584872326595
+E2 primary (158-case analysis region),S,,"step 5, after protocol removal",checks.json E2_primary_after_removal,pass,false
+E2 primary (158-case analysis region),S,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,auc_base,0.7009213206929662
+E2 primary (158-case analysis region),S,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,auc_full,0.7004544415351303
+E2 primary (158-case analysis region),S,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,delta_auc,-0.00046687915783594214
+E2 primary (158-case analysis region),S,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,ci_lo,-0.02206429757286127
+E2 primary (158-case analysis region),S,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,ci_hi,0.02105725998487303
+E2 primary (158-case analysis region),S,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,pass,false
+E3-state retention (158-case),S,,step 5,checks.json E3_state_primary,applicable,false
+E3-state retention (158-case),S,,step 5,checks.json E3_state_primary,note,"""E2 primary failed: retention of state information could not be assessed"""
+E3-state retention (158-case),S,,step 5,checks.json E3_state_primary,pass_,null
+E3-state retention (158-case),S,,X1,x1_e3.json E3_state_primary_X1,applicable,false
+E3-state retention (158-case),S,,X1,x1_e3.json E3_state_primary_X1,note,"""E2 primary failed: retention of state information could not be assessed"""
+E3-state retention (158-case),S,,X1,x1_e3.json E3_state_primary_X1,pass_,null
+E3-site (158-case analysis region),REF,linear,step 5 (protocol LEACE),checks.json E3_site_primary,n_cases,158
+E3-site (158-case analysis region),REF,linear,step 5 (protocol LEACE),checks.json E3_site_primary,ba,0.4482135511547276
+E3-site (158-case analysis region),REF,linear,step 5 (protocol LEACE),checks.json E3_site_primary,lo_2p5,0.3871048987776929
+E3-site (158-case analysis region),REF,linear,step 5 (protocol LEACE),checks.json E3_site_primary,hi_97p5,0.5176802976435328
+E3-site (158-case analysis region),REF,linear,step 5 (protocol LEACE),checks.json E3_site_primary,upper_one_sided_95,0.505065706352471
+E3-site (158-case analysis region),REF,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,n_cases,158
+E3-site (158-case analysis region),REF,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,ba,0.25
+E3-site (158-case analysis region),REF,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,lo_2p5,0.25
+E3-site (158-case analysis region),REF,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,hi_97p5,0.25
+E3-site (158-case analysis region),REF,linear,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,upper_one_sided_95,0.25
+E3-site (158-case analysis region),REF,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,n_cases,158
+E3-site (158-case analysis region),REF,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,ba,0.6196303696303695
+E3-site (158-case analysis region),REF,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,lo_2p5,0.5434357921490275
+E3-site (158-case analysis region),REF,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,hi_97p5,0.6873256339248986
+E3-site (158-case analysis region),REF,mlp,step 5 (protocol LEACE),checks.json E3_site_primary,upper_one_sided_95,0.679523417758712
+E3-site (158-case analysis region),REF,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,n_cases,158
+E3-site (158-case analysis region),REF,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,ba,0.4580529764353294
+E3-site (158-case analysis region),REF,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,lo_2p5,0.39160315787154026
+E3-site (158-case analysis region),REF,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,hi_97p5,0.5297230343186226
+E3-site (158-case analysis region),REF,mlp,X1 (LEACE refitted on the analysis region),x1_e3.json E3_site_primary_X1,upper_one_sided_95,0.517420447199859
+E2 primary (158-case analysis region),REF,,"step 5, before removal",checks.json E2_primary,auc_base,0.6988846785585167
+E2 primary (158-case analysis region),REF,,"step 5, before removal",checks.json E2_primary,auc_full,0.7225783944132209
+E2 primary (158-case analysis region),REF,,"step 5, before removal",checks.json E2_primary,delta_auc,0.023693715854704256
+E2 primary (158-case analysis region),REF,,"step 5, before removal",checks.json E2_primary,ci_lo,-0.0004872832492350014
+E2 primary (158-case analysis region),REF,,"step 5, before removal",checks.json E2_primary,ci_hi,0.04863192768195907
+E2 primary (158-case analysis region),REF,,"step 5, before removal",checks.json E2_primary,pass,false
+E2 primary (158-case analysis region),REF,,"step 5, after protocol removal",checks.json E2_primary_after_removal,auc_base,0.7006732521148344
+E2 primary (158-case analysis region),REF,,"step 5, after protocol removal",checks.json E2_primary_after_removal,auc_full,0.724470946852162
+E2 primary (158-case analysis region),REF,,"step 5, after protocol removal",checks.json E2_primary_after_removal,delta_auc,0.023797694737327513
+E2 primary (158-case analysis region),REF,,"step 5, after protocol removal",checks.json E2_primary_after_removal,ci_lo,-0.0003989757726410605
+E2 primary (158-case analysis region),REF,,"step 5, after protocol removal",checks.json E2_primary_after_removal,ci_hi,0.050718333667495445
+E2 primary (158-case analysis region),REF,,"step 5, after protocol removal",checks.json E2_primary_after_removal,pass,false
+E2 primary (158-case analysis region),REF,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,auc_base,0.7006732521148344
+E2 primary (158-case analysis region),REF,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,auc_full,0.7245248243858519
+E2 primary (158-case analysis region),REF,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,delta_auc,0.02385157227101742
+E2 primary (158-case analysis region),REF,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,ci_lo,-0.0016572599216725268
+E2 primary (158-case analysis region),REF,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,ci_hi,0.051542892465344284
+E2 primary (158-case analysis region),REF,,"X1, after X1 removal",x1_e3.json E2_primary_after_removal_X1,pass,false
+E3-state retention (158-case),REF,,step 5,checks.json E3_state_primary,applicable,false
+E3-state retention (158-case),REF,,step 5,checks.json E3_state_primary,note,"""E2 primary failed: retention of state information could not be assessed"""
+E3-state retention (158-case),REF,,step 5,checks.json E3_state_primary,pass_,null
+E3-state retention (158-case),REF,,X1,x1_e3.json E3_state_primary_X1,applicable,false
+E3-state retention (158-case),REF,,X1,x1_e3.json E3_state_primary_X1,note,"""E2 primary failed: retention of state information could not be assessed"""
+E3-state retention (158-case),REF,,X1,x1_e3.json E3_state_primary_X1,pass_,null
