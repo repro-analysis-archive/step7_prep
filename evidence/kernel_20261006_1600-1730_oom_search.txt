@@ -1,0 +1,3 @@
+command: grep -i -c -E 'oom|out of memory|killed process' kernel_20261006_1600-1730.txt
+result: 0
+lines in excerpt: 1

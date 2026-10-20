@@ -1,0 +1,2 @@
+2026-10-07T09:37:15+09:00 watchdog start; max relaunches 3; interval 600s
+2026-10-12T14:28:06+09:00 runner not running for another reason; watchdog exits without action: runner: not running; state complete

@@ -1,0 +1,17 @@
+2026-10-06T17:28:14.344000+0900 localhost.localdomain sudo[2098034]:     user : TTY=pts/4 ; PWD=/home/user/projects/medical_video_causal_gate ; USER=root ; COMMAND=/usr/sbin/sysctl vm.swappiness=10
+2026-10-06T17:28:14.344978+0900 localhost.localdomain sudo[2098034]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-06T17:28:14.348249+0900 localhost.localdomain sudo[2098034]: pam_unix(sudo:session): session closed for user root
+2026-10-06T17:28:14.358543+0900 localhost.localdomain sudo[2098037]:     user : TTY=pts/4 ; PWD=/home/user/projects/medical_video_causal_gate ; USER=root ; COMMAND=/usr/sbin/swapoff -a
+2026-10-06T17:28:14.359439+0900 localhost.localdomain sudo[2098037]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-06T17:28:17.023042+0900 localhost.localdomain systemd[1]: dev-disk-by\x2duuid-05945f3f\x2dfb73\x2d4fa9\x2da72b\x2d455957a10c61.swap: Deactivated successfully.
+2026-10-06T17:28:17.023474+0900 localhost.localdomain systemd[1]: dev-disk-by\x2dpath-pci\x2d0000:02:00.0\x2dnvme\x2d1\x2dpart3.swap: Deactivated successfully.
+2026-10-06T17:28:17.023539+0900 localhost.localdomain systemd[1]: dev-disk-by\x2did-nvme\x2dWD_BLACK_SN770_1TB_24141Z806916\x2dpart3.swap: Deactivated successfully.
+2026-10-06T17:28:17.023574+0900 localhost.localdomain sudo[2098037]: pam_unix(sudo:session): session closed for user root
+2026-10-06T17:28:17.023593+0900 localhost.localdomain systemd[1]: dev-disk-by\x2dpartuuid-fbf66e1c\x2d5cec\x2d485c\x2db8c4\x2da0699148572f.swap: Deactivated successfully.
+2026-10-06T17:28:17.023640+0900 localhost.localdomain systemd[1]: dev-disk-by\x2did-nvme\x2dWD_BLACK_SN770_1TB_24141Z806916_1\x2dpart3.swap: Deactivated successfully.
+2026-10-06T17:28:17.023685+0900 localhost.localdomain systemd[1]: dev-disk-by\x2did-nvme\x2deui.e8238fa6bf530001001b448b470ac305\x2dpart3.swap: Deactivated successfully.
+2026-10-06T17:28:17.023732+0900 localhost.localdomain systemd[1]: dev-nvme0n1p3.swap: Deactivated successfully.
+2026-10-06T17:28:17.029028+0900 localhost.localdomain sudo[2098103]:     user : TTY=pts/4 ; PWD=/home/user/projects/medical_video_causal_gate ; USER=root ; COMMAND=/usr/sbin/swapon -a
+2026-10-06T17:28:17.029536+0900 localhost.localdomain sudo[2098103]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-06T17:28:17.033541+0900 localhost.localdomain sudo[2098103]: pam_unix(sudo:session): session closed for user root
+2026-10-06T17:28:17.034698+0900 localhost.localdomain kernel: Adding 16777212k swap on /dev/nvme0n1p3.  Priority:-2 extents:1 across:16777212k SSFS

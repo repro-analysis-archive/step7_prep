@@ -1,0 +1,9 @@
+2026-10-06T14:20:15+09:00 mask_check: start (attempt 1)
+2026-10-06T16:34:57+09:00 memory pressure with one process (swap-out 65 MiB in 60 s), strike 1/3
+2026-10-06T16:35:12+09:00 memory pressure with one process (swap-out 65 MiB in 60 s), strike 2/3
+2026-10-06T16:35:27+09:00 memory pressure with one process (swap-out 68 MiB in 60 s), strike 3/3
+2026-10-06T16:35:27+09:00 shutting down: memory pressure with a single process
+2026-10-06T16:35:27+09:00 STOP: memory pressure with a single process
+2026-10-06T17:28:49+09:00 preflight passed: HEAD 9e1aa715af30 (launch commit 9e1aa715af30); clean tree; weights and third_party verified; 14 physical cores, 12 workers on CPUs [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], reserved CPUs [18, 19]; memory cap 100.5 GiB
+2026-10-06T17:28:52+09:00 mask_check: start (attempt 1)
+2026-10-07T21:33:51+09:00 mask check valid (r = 0.45 stands)
