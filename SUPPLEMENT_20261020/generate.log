@@ -4,3 +4,4 @@ written: CAPTIONS.md, SOURCES.md, figB_ba_by_set.pdf, figS4_mask_profiles.pdf, f
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.89
 	Maximum resident set size (kbytes): 186548
 exit=0
+# 2026-10-20 09:09:06 +0900 make_supplement.py re-run to a scratch directory with --fact-base evidence/SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md (same SHA-256) after the SOURCES.md text change; every other .md/.csv output byte-identical; only SOURCES.md copied (PDFs not regenerated)

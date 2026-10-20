@@ -14,4 +14,6 @@
 | b_sens | /srv/ss_exploratory_B | 458341f | results_B/b_sensitivity_summary.csv | 84b4cf4952669ff52981d4e99d94c7fbe67f9139d4d7e36e784298befbdb0148 |
 | b_report | /srv/ss_exploratory_B | 458341f | results_B/B_REPORT.md | 18c4c92597027d0d264914734fc40e13981ea4c90a598125b4da4e99e64a5da4 |
 
-Fact base for captions: `SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md`, SHA-256 `c1d8d651535136907b461e2666b4671d4fc58c736a78e6bb61fbcac54dc27684` (not committed; provided by the investigator).
+Fact base for captions: `SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md`, SHA-256 `c1d8d651535136907b461e2666b4671d4fc58c736a78e6bb61fbcac54dc27684`, provided by the investigator; committed copy `evidence/SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md` (step7_prep `84d8e2d`).
+
+Table S4 also quotes the step 4–5 runner-log line "mask check valid (r = 0.45 stands)" (LaCie `ss_step4_5/logs/progress.log` line 234, not in a repository); it is preserved unchanged in `evidence/step4_5_progress_log_lines_43_57-63_234.txt` (step7_prep `84d8e2d`; commands and SHA-256 in `evidence/README.md`).

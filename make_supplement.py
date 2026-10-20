@@ -418,8 +418,13 @@ def main():
     src = ["# Sources (read with `git show <commit>:<path>`; nothing modified)", ""]
     src += md_table(["name", "repository", "commit", "path", "SHA-256 of the blob"],
                     [[k, r, c[:7], p, sha(raw[k])] for k, (r, c, p) in SRC.items()])
-    src += ["", f"Fact base for captions: `{os.path.basename(a.fact_base)}`, SHA-256 `{sha(fact)}` (not committed; "
-                "provided by the investigator)."]
+    src += ["", f"Fact base for captions: `{os.path.basename(a.fact_base)}`, SHA-256 `{sha(fact)}`, provided by the "
+                "investigator; committed copy `evidence/SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md` "
+                "(step7_prep `84d8e2d`).", "",
+            "Table S4 also quotes the step 4–5 runner-log line \"mask check valid (r = 0.45 stands)\" (LaCie "
+            "`ss_step4_5/logs/progress.log` line 234, not in a repository); it is preserved unchanged in "
+            "`evidence/step4_5_progress_log_lines_43_57-63_234.txt` (step7_prep `84d8e2d`; commands and SHA-256 in "
+            "`evidence/README.md`)."]
     write(a.out, "SOURCES.md", "\n".join(src))
     print("written:", ", ".join(sorted(os.listdir(a.out))))
 

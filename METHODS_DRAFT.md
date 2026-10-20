@@ -2,7 +2,7 @@
 
 *Drafted 2026-10-09 from the frozen protocol (`docs/SS_PROTOCOL_DS203.md`, commit `4c86dc5`) and the repository records named in each section. That draft did not depend on step-5, step-6 or step-7 outcomes.*
 
-*Updated 2026-10-20, after all results were known, from the facts of the evaluator record `SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md` (SHA-256 `c1d8d651…dc27684`) only: r and all commit hashes filled; the executed order; the bootstrap's resampling of the truths; operational times; a new section "Exploratory analyses (outside the frozen protocol)"; the deviation register. No number was changed. Post-result presentation choices are recorded in `POST_RESULT_PRESENTATION.md`.*
+*Updated 2026-10-20, after all results were known, from the facts of the evaluator record `SS_DS203_PROJECT_RECORD_for_evaluator_20261020_v5.md` (SHA-256 `c1d8d651…dc27684`; committed copy `step7_prep/evidence/`, `84d8e2d`) only: r and all commit hashes filled; the executed order; the bootstrap's resampling of the truths; operational times; a new section "Exploratory analyses (outside the frozen protocol)"; the deviation register. No number was changed. Post-result presentation choices are recorded in `POST_RESULT_PRESENTATION.md`.*
 
 *`[REF: …]` marks a literature reference for the investigator to supply. `[TO FILL: …]` marks an item the investigator must still supply.*
 
@@ -89,7 +89,7 @@
   * bilinear antialiased resize to the model input;
   * a common mask: a circle of radius r × side plus the lowest 3 % of the square, set to black before model normalisation.
   * r = 0.45 unless a mechanical check of the per-centre mean-frame radial profile (§3.1, §14 step 4a) gives a smaller visible radius; the only alternative permitted is r = 0.98 × min_c ρ_c.
-  * Value used: **r = 0.45** (step-4 record `8d4c61a`, `results/step4/mask_check.json`).
+  * Value used: **r = 0.45** (step-4 record `8d4c61a`, `results/step4/mask_check.json`; `run_meta.json` `mask_check_valid` = true; runner log "mask check valid (r = 0.45 stands)", preserved in `evidence/step4_5_progress_log_lines_43_57-63_234.txt`).
     * ρ_c = 0.5625 for centre 2 and 0.703125 for centres 3, 4 and 5 (the last profile point).
     * min_c ρ_c = 0.5625 ≥ 0.45, so the fallback was not used.
     * The per-centre profiles are in Supplementary Figure S4 and Table S4.
@@ -257,14 +257,14 @@ At each window step, nuisances condition on the history of past synthetic action
   * checkpoints each unit;
   * logs resource use, but no estimate.
 * **Step 4–5 runner** (`9e1aa71`): staging, the mask check, extraction in two lanes, near-uniform flags, and an automatic records-only commit of the step-4 record before step 5 could start. Settings: 12 workers on 12 of 14 physical cores, 6 threads per process, a memory cap of 80 % of RAM, at most 2 concurrent disk readers.
-* **Operational events** (`decisions/OPERATIONS_LOG_STEP4_5.md`):
-  * **Memory-guard stop.** On 2026-10-06 at 16:35:27 +0900 the step 4–5 runner's memory guard stopped the run with about 80 GiB of RAM available.
+* **Operational events** (`decisions/OPERATIONS_LOG_STEP4_5.md`; log excerpts preserved unchanged in `step7_prep/evidence/`, commit `84d8e2d`, with the commands and SHA-256 in `evidence/README.md`):
+  * **Memory-guard stop.** On 2026-10-06 at 16:35:27 +0900 the step 4–5 runner's memory guard stopped the run with about 80 GiB of RAM available (strikes 16:34:57–16:35:27; `evidence/step4_5_progress_log_lines_43_57-63_234.txt`).
     * With that much memory available, only the guard's swap-out criterion (more than 64 MiB swapped out in 60 s) can have fired, so the stop was a false positive.
-    * The kernel log shows no OOM line between 16:00 and 17:30.
-  * **Swap settings.** `vm.swappiness` was set from 60 to 10, and swap was disabled and re-enabled, at 17:28:14–17:28:17 (system journal, sudo entries). The operations log records the swappiness change without a time and does not record the swap off/on.
-  * **Resume.** The run was resumed with the same launch commit at 17:28:48. The interrupted mask check, a single unit, restarted from the first case; completed units were not recomputed.
+    * The kernel log shows no OOM line between 16:00 and 17:30 (`evidence/kernel_20261006_1600-1730.txt`, `evidence/kernel_20261006_1600-1730_oom_search.txt`).
+  * **Swap settings.** `vm.swappiness` was set from 60 to 10, and swap was disabled and re-enabled, at 17:28:14–17:28:17 (system journal, sudo entries from TTY pts/4; `evidence/journal_20261006_1720-1735_sudo_swap.txt`). The operations log records the swappiness change without a time and does not record the swap off/on.
+  * **Resume.** The run was resumed with the same launch commit at 17:28:48 (orchestrator process start, `decisions/OPERATIONS_LOG_STEP4_5.md`; runner preflight 17:28:49). The interrupted mask check, a single unit, restarted from the first case (mask-check start 14:20:15 and again 17:28:52; `evidence/step4_5_progress_log_lines_43_57-63_234.txt`); completed units were not recomputed.
   * **Watchdog.** A watchdog (`~/ops/runner_watchdog_v1.sh`, pid 4004380, log `~/ops/runner_watchdog.log`) was started on 2026-10-07 at 09:37:15 +0900 to relaunch the runner after a memory-pressure stop.
-    * It never relaunched the runner.
+    * It never relaunched the runner: its log has no relaunch line and ends on 2026-10-12 at 14:28:06 with "watchdog exits without action … state complete" (`evidence/runner_watchdog.log`).
     * A check at about 08:15 on 2026-10-07, before it was started, had found no watchdog (`step7_prep/OPERATIONS_LOG_ADDENDUM.md`).
 * **dts warnings.** ffmpeg emitted "non monotonically increasing dts" warnings. A separate quality check on 21 staged files found:
   * **No frame loss.** Four full decodes delivered exactly the expected frame counts.
@@ -300,7 +300,7 @@ At each window step, nuisances condition on the history of past synthetic action
     * the orchestration runners, the thread and worker settings, and the operational events above, which do not change analysis code or settings fixed by the protocol.
   * **Reporting and documentation:**
     * the per-centre mask-check profiles required by §3.1 were not in the first results report; they are now reported (Supplementary Figure S4, Table S4);
-    * the swap off/on at 17:28:14–17:28:17 on 2026-10-06 is not in the operations log, which also gives the swappiness change without a time;
+    * the swap off/on at 17:28:14–17:28:17 on 2026-10-06 is not in the operations log, which also gives the swappiness change without a time (system-journal excerpt preserved in `evidence/journal_20261006_1720-1735_sudo_swap.txt`);
     * the bootstrap's resampling of the truths is not stated in §12.3 (see Aggregation);
     * the Δ orientation and bootstrap seeds of the exploratory analyses X1 / X2 differ from §12.3 (next section).
 
