@@ -1,3 +1,16 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: VideoMAE (arXiv:2203.12602). Code and checkpoints: github.com/MCG-NJU/VideoMAE @ 14ef8d85 —
+#   CC BY-NC 4.0; not included (architecture via transformers VideoMAEModel, dependency, Apache-2.0).
+# Embedded upstream material: short quotations of the VideoMAE code (CC BY-NC 4.0) and paper (SPEC sources).
+# Apache-2.0 notice: _rename_key and the qkv split in convert_original are adapted from Hugging Face
+#   Transformers v4.46.3, src/transformers/models/videomae/convert_videomae_to_pytorch.py,
+#   Copyright 2022 The HuggingFace Inc. team, licensed under the Apache License, Version 2.0
+#   (LICENSES/Apache-2.0.txt). Changed by the authors: only the encoder renaming rules are kept.
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """VideoMAE adapter (clip-level, secondary arm): the official self-supervised PRE-TRAINING checkpoints.
 
 Class line (frozen): "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder

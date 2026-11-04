@@ -1,3 +1,14 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: LeanVAE (arXiv:2503.14325). Code: github.com/westlake-repl/LeanVAE @ 62f7c7d5 — MIT License,
+#   Copyright (c) 2025 westlake-repl; loaded at run time from third_party/ (not included).
+#   Weights: huggingface.co/Yumic/LeanVAE @ 4585e461 — MIT; not included.
+# Embedded upstream material: architecture values and short quotations of the LeanVAE code, README,
+#   scripts and paper (SPEC sources).
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """LeanVAE adapter (secondary arm; generic causal video VAE, westlake-repl/LeanVAE @ 62f7c7d).
 
 Config (released checkpoints Yumic/LeanVAE LeanVAE-dim16.ckpt / LeanVAE-dim4.ckpt; README "LeanVAE-16ch" / "-4ch"):

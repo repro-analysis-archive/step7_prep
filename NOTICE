@@ -1,0 +1,23 @@
+step7_prep — NOTICE
+
+Original code: Copyright (c) 2026 Hisashi Nakano. MIT License (LICENSE).
+Records, results and figure data: CC BY 4.0 (LICENSE-CC-BY-4.0).
+
+This repository contains limited third-party material that is NOT covered by the MIT licence or by CC BY 4.0 and remains
+under its own terms (details and attribution: THIRD_PARTY_NOTICES.md; licence texts: LICENSES/):
+
+* locked/ss_benchmark/models/sec_videomae.py — the function `_rename_key` and the `qkv` split in `convert_original` are adapted from
+  Hugging Face Transformers v4.46.3, src/transformers/models/videomae/convert_videomae_to_pytorch.py,
+  Copyright 2022 The HuggingFace Inc. team, licensed under the Apache License, Version 2.0 (LICENSES/Apache-2.0.txt).
+  Modified: only the encoder renaming rules are kept; decoder and head rules are removed.
+* locked/ss_benchmark/models/sec_wfvae.py — `CONFIG` is the released config.json of chestnutlzj/WF-VAE-L-16Chn (WF-VAE, PKU-YuanGroup),
+  licensed under the Apache License, Version 2.0. Modified: the private keys `_class_name` and `_diffusers_version`
+  are dropped.
+* locked/ss_benchmark/models/*.py — short verbatim quotations of upstream code, documentation, configuration and papers, each with its
+  source, under the licences of the respective upstream projects (MIT; Apache-2.0; CC BY-NC 4.0 for VideoMAE;
+  CC BY-NC-SA 4.0 for SelfSupSurg), reproduced with attribution for non-commercial research use.
+
+Built on NVIDIA Cosmos. The NVIDIA Cosmos tokenizer weights (nvidia/Cosmos-1.0-Tokenizer-CV8x8x8) are licensed by
+NVIDIA Corporation under the NVIDIA Open Model License; they are not included in this repository.
+
+No upstream source file, configuration file or model weight file is distributed in this repository.

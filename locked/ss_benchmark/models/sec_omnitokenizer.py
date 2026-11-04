@@ -1,3 +1,14 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: OmniTokenizer (arXiv:2406.09399). Code: github.com/FoundationVision/OmniTokenizer @ 701b6190 —
+#   MIT License, Copyright (c) 2024 FoundationVision; executed at run time from third_party/ (not included).
+#   Weights: huggingface.co/Daniel0724/OmniTokenizer @ 9ebde216 (no licence declared); not included.
+# Embedded upstream material: ARGS (values of scripts/recons/eval_video.sh and argparse defaults) and
+#   short quotations of the OmniTokenizer code, scripts, README and paper (SPEC sources).
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """OmniTokenizer (ImageNet + K600), secondary arm, clip-level: VQVAE `imagenet_k600.ckpt` (variant "vq", default) and
 VAE `imagenet_k600_vae.ckpt` (variant "vae"; README "| VAE | ImageNet + K600 | 0.78 | 13.02 |"; the authors'
 eval_video.sh block for it is identical to the VQ block plus --use_vae). Both checkpoints share the encoder; the VAE's

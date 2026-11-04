@@ -1,3 +1,15 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: WF-VAE (arXiv:2411.17459). Code: github.com/PKU-YuanGroup/WF-VAE @ d858bee8 — Apache License 2.0;
+#   loaded at run time from third_party/ (not included).
+#   Weights: huggingface.co/chestnutlzj/WF-VAE-L-16Chn @ 8c0aa9ce — Apache-2.0; not included.
+# Embedded upstream material: CONFIG is the released config.json (Apache-2.0; changed by the authors: the
+#   private keys _class_name and _diffusers_version are dropped); short quotations of the WF-VAE code,
+#   scripts, README and paper (SPEC sources). Licence text: LICENSES/Apache-2.0.txt.
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """WF-VAE-L 16ch adapter (clip-level, secondary arm; PKU-YuanGroup WF-VAE, HF chestnutlzj/WF-VAE-L-16Chn).
 
 * Architecture: causalvideovae WFVAEModel from third_party/WF-VAE (commit d858bee) with the released checkpoint's

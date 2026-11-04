@@ -1,3 +1,15 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: LARP (arXiv:2410.21264). Code: github.com/hywang66/LARP @ 8aaed63354c8c0fabcb8a86a2e31c34320e6db86 —
+#   MIT License, Copyright (c) 2024 Hanyu Wang; loaded at run time from third_party/ (not included).
+#   Weights: huggingface.co/hywang66/LARP-L-long-tokenizer @ c93a7e2d (no licence declared); not included.
+# Embedded upstream material: CONFIG is the verbatim config.json of the Hugging Face repository (machine-
+#   generated hyperparameter values of the LARP code); short quotations of the LARP code, README, scripts
+#   and paper (SPEC sources).
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """LARP-L-Long tokenizer (secondary arm, generic video tokenizer; HF hywang66/LARP-L-long-tokenizer).
 
 Code: third_party/LARP (hywang66/LARP @ 8aaed63354c8c0fabcb8a86a2e31c34320e6db86), models/{models,embed,transformer,

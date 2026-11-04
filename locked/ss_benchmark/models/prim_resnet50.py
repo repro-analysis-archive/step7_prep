@@ -1,3 +1,15 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: SelfSupSurg ResNet-50 (MoCo v2 / SimCLR / SwAV / DINO). Paper: Ramesh S et al., "Dissecting
+#   self-supervised learning methods for surgical computer vision", Med Image Anal 2023;102844.
+#   Code, models and configs: github.com/CAMMA-public/SelfSupSurg (main @ 8a03d289) — CC BY-NC-SA 4.0;
+#   weights not included. Architecture: torchvision ResNet-50 (dependency, BSD-3-Clause).
+# Embedded upstream material: three configuration values quoted from the SelfSupSurg hparams YAML and one
+#   sentence of the paper (SPEC sources), under CC BY-NC-SA 4.0 / the paper's terms.
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """SelfSupSurg adapter: ResNet-50 (frame-level, primary arm; MoCo v2 / SimCLR / SwAV / DINO checkpoints).
 
 * Architecture: torchvision ResNet-50 (the configs initialise from torchvision's resnet50-19c8e357.pth); the

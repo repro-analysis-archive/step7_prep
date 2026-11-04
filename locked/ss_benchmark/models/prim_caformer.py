@@ -1,3 +1,16 @@
+# --------------------------------------------------------------------------------------------------------------------
+# Licence and upstream attribution (added 2026-11-04 for the public release; comment only — the code is unchanged).
+# Original code in this file: Copyright (c) 2026 Hisashi Nakano, MIT License (LICENSE at the repository root).
+# Upstream: SurgeNet (SurgeNetCholec / SurgeNetRARP, CAFormer-S18). Paper: Jaspers TJM et al., Med Image Anal
+#   2026;108:103873, doi:10.1016/j.media.2025.103873.
+#   Code: github.com/TimJaspers0801/SurgeNet @ 54831cfacf3a6cac0bbf5119f72b9cb9c31c3e82 — MIT License,
+#   Copyright (c) 2025 Cris Claessens. metaformer.py is imported at run time from third_party/ (not included).
+#   Weights: huggingface.co/TimJaspersTue/SurgeNetModels @ cc21f4a1 — CC BY-NC 4.0 (HF card; the GitHub
+#   LICENSE_MODELS.txt states CC BY-NC-SA 4.0); not included.
+# Embedded upstream material: short quotations of metaformer.py, the SurgeNet README and the paper (SOURCES).
+# Upstream material is NOT covered by the MIT licence; it remains under its upstream licence and is reproduced
+# with attribution for non-commercial research use. Details: NOTICE, THIRD_PARTY_NOTICES.md, LICENSES/.
+# --------------------------------------------------------------------------------------------------------------------
 """SurgeNetCholec / SurgeNetRARP adapter (frame-level, primary arm). Corrected by CODELOCK_CORRECTION_001.
 
 * Architecture: the official SurgeNet network, `caformer_s18(pretrained='SurgeNet')` of the official model-definition
