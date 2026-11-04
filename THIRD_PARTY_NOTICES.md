@@ -3,7 +3,7 @@
 The model adapters in `locked/ss_benchmark/models/` are the authors' original code (MIT, `LICENSE`). They contain no upstream source file,
 configuration file or weight file. They do contain upstream material quoted or adapted for provenance, listed below with
 its licence; this material is **not** covered by the MIT licence. Licence texts as fetched on 2026-11-04 from the pinned
-upstream revisions are in `LICENSES/third_party/`; the Apache License 2.0 is in `LICENSES/Apache-2.0.txt`.
+upstream revisions are in `LICENSES/upstream/`; the Apache License 2.0 is in `LICENSES/Apache-2.0.txt`.
 
 Built on NVIDIA Cosmos: the NVIDIA Cosmos tokenizer weights are licensed by NVIDIA Corporation under the NVIDIA Open Model
 License (https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/) and are not included.
@@ -62,7 +62,7 @@ License (https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open
 | `locked/ss_benchmark/models/sec_videomae.py` | VideoMAE pre-training checkpoints | [MCG-NJU/VideoMAE](https://github.com/MCG-NJU/VideoMAE) @ `14ef8d85` — CC BY-NC 4.0; adapted code from [huggingface/transformers](https://github.com/huggingface/transformers) v4.46.3 — Apache-2.0 | official checkpoints of `MODEL_ZOO.md` — CC BY-NC 4.0 (repository licence) | arXiv:2203.12602 |
 | `locked/ss_benchmark/models/sec_wfvae.py` | WF-VAE-L 16ch | [PKU-YuanGroup/WF-VAE](https://github.com/PKU-YuanGroup/WF-VAE) @ `d858bee8` — Apache-2.0 | [chestnutlzj/WF-VAE-L-16Chn](https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn) @ `8c0aa9ce` — Apache-2.0 | arXiv:2411.17459 |
 
-## Licence texts in `LICENSES/third_party/`
+## Licence texts in `LICENSES/upstream/`
 
 | file | project, revision | licence |
 |---|---|---|
